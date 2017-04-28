@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApplication7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication7"
+        mc:Ignorable="d"
+        Title=".NetNotpad" Height="350" Width="561.667" ResizeMode="CanResizeWithGrip" Icon="icons/icon.png">
+    <Grid>
+        <Menu x:Name="menu" VerticalAlignment="Top">
+            <MenuItem x:Name="File" Header="File">
+                <MenuItem x:Name="New" Header="New" HorizontalAlignment="Left" Width="140" Click="New_Click"/>
+                <MenuItem x:Name="Open" Header="Open" HorizontalAlignment="Left" Width="140" Click="Open_Clicked"/>
+                <MenuItem x:Name="Save" Header="Save" HorizontalAlignment="Left" Width="140" Click="Save_Clicked"/>
+                <MenuItem x:Name="SaveFileAs" Header="Save as.." HorizontalAlignment="Left" Width="140" Click="SaveFileAs_Click"/>
+                <Separator HorizontalAlignment="Left" Width="140"/>
+                <MenuItem x:Name="Exit" Header="Exit" HorizontalAlignment="Left" Width="140" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="Edit" Header="Edit">
+                <MenuItem x:Name="Undo" Header="Undo" HorizontalAlignment="Left" Width="140" Click="Undo_Click"/>
+                <Separator HorizontalAlignment="Left" Height="1" Width="140"/>
+                <MenuItem x:Name="Cut" Header="Cut" HorizontalAlignment="Left" Width="140" Click="Cut_Click"/>
+                <MenuItem x:Name="Copy" Header="Copy" HorizontalAlignment="Left" Width="140" Click="Copy_Click"/>
+                <MenuItem x:Name="Paste" Header="Paste" HorizontalAlignment="Left" Width="140" Click="Paste_Click"/>
+                <MenuItem x:Name="Remove" Header="Remove" HorizontalAlignment="Left" Width="140" Click="Remove_Click"/>
+                <Separator/>
+                <MenuItem x:Name="Find" Header="Find" HorizontalAlignment="Left" Width="140" Click="Find_Click"/>
+                <MenuItem x:Name="Replace" Header="Replace" HorizontalAlignment="Left" Width="140" Click="Replace_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="Format" Header="Format">
+                <MenuItem x:Name="Word_Wrap" Header="Word Wrap   " HorizontalAlignment="Left" Click="Word_Wrap_Click" IsCheckable="True"/>
+                <MenuItem x:Name="Font" Header="Font" Click="Font_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="Help" Header="Help">
+                <MenuItem x:Name="About" Header="About" HorizontalAlignment="Left" Width="140" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Auto" FontSize="14.667" Margin="0,18,0,20" Padding="0" FontFamily="Consolas" TextChanged="Text_Changed" />
+        <StatusBar VerticalAlignment="Bottom">
+            <StatusBarItem x:Name="Stats" FontSize="10.667" Content="Lengths : 0,  Lines : 0" HorizontalAlignment="Left"/>
+            <StatusBarItem x:Name="FileName" HorizontalAlignment="Right" Margin="0,0,15,0" FontSize="10.667"/>
+        </StatusBar>
+    </Grid>
+</Window>
